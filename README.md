@@ -7,7 +7,8 @@ Chloé Maccarinelli - Arnaud Fernandez
              possiblité d'uploader les images
              images affichées (lien / nom)
              1 seul formulaire pour Annonces et Illustrations
+             
+-> API REST + test postman 
 
-Bonus : Ajax upload
-        Cron Clean annonces
+
         
