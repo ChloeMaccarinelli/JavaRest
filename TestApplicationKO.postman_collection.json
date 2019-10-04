@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "dd37d32b-78e5-475a-a4a9-e6e4af9a4552",
+		"name": "TestApplicationKO",
+		"description": "Test de requête d'erreurs de l'application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/API/getAnnonce/a",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce/a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce",
+						"a"
+					]
+				},
+				"description": "Test GET KO\ngetAnnonce"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"id\" : \"50\",\n\t\"title\": \"TestEdit\",\n\t\"description\": \"TestDescEdit\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"Mongolito.png\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce"
+					]
+				},
+				"description": "Test PUT KO\ngetAnnonce"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAllAnnonces",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"title\": null,\n\t\"description\": \"TestDescPost\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"toto.png\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAllAnnonces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAllAnnonces"
+					]
+				},
+				"description": "Test POST KO\ngetAllAnnonces"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"id\" : 50,\n\t\"title\": \"TestEdit\",\n\t\"description\": \"TestDescEdit\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"Mongolito.png\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce"
+					]
+				},
+				"description": "Test DELETE KO \ngetAnnonce"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce/50?title=Robert",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce/50?title=Robert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce",
+						"50"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Robert"
+						}
+					]
+				},
+				"description": "Test PATCH KO\ngetAnnonce"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

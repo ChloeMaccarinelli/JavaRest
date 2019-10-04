@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "f81f1641-130c-4577-9791-da230fd1e86d",
+		"name": "TestApplicationOK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/API/getAllAnnonces",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"title\": \"TestPost\",\n\t\"description\": \"TestDescPost\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"toto.png\"\n}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAllAnnonces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAllAnnonces"
+					]
+				},
+				"description": "Request POST OK getAllAnnonces"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAllAnnonces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/API/getAllAnnonces",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAllAnnonces"
+					]
+				},
+				"description": "Request GET OK \ngetAllAnnonces"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"id\" : 2,\n\t\"title\": \"TestEdit\",\n\t\"description\": \"TestDescEdit\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"Mongolito.png\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce",
+						"2"
+					]
+				},
+				"description": "API REST FONCTION DELETE SUR getAnnonce "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce/1?title=Robert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce",
+						"1"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Robert"
+						}
+					]
+				},
+				"description": "Test PUT OK\ngetAnnonce"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"annonce\": {\n\t\"id\" : \"1\",\n\t\"title\": \"TestEdit\",\n\t\"description\": \"TestDescEdit\",\n\t\"validTill\": \"10-10-2020\",\n\t\"illustration\": \"Mongolito.png\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce"
+					]
+				},
+				"description": "Test PUT OK\ngetAnnonce"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/API/getAnnonce/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/API/getAnnonce/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"API",
+						"getAnnonce",
+						"1"
+					]
+				},
+				"description": "Test GET OK\ngetAnnonce"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "204acee2-ce75-4bef-92f6-7e4227e69856",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9ad76cdc-cdb8-4bbd-a210-d560df373d84",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
